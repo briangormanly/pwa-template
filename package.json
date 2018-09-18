@@ -1,0 +1,17 @@
+{
+  "name": "edu.marist.gormanly.template.pwa",
+  "version": "1.0.0",
+  "description": "PWA template",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 1337"
+  },
+  "keywords": [
+    "PWA"
+  ],
+  "author": "Brian Gormanly",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
