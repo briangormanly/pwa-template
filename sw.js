@@ -1,20 +1,17 @@
-self.addEventListener('install', event => {
+self.addEventListener('install', (e) => {
   console.log('V1 installing…');
 
-  // cache a cat SVG
-/*
-  event.waitUntil(
-    caches.open('static-v1').then(cache => cache.add('/cat.svg'))
-  );
-  */
+  //self.skipWaiting();
+
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', (e) => {
   console.log('V1 now ready to handle fetches!');
 });
 
-self.addEventListener('fetch', event => {
-  const url = new URL(event.request.url);
+self.addEventListener('fetch', (e) => {
+  //const url = new URL(e.request.url);
+  console.log('Fetch Event: ' + e.request.url)
 
   // serve the cat SVG from the cache if the request is
   // same-origin and the path is '/dog.svg'
@@ -23,4 +20,22 @@ self.addEventListener('fetch', event => {
     event.respondWith(caches.match('/cat.svg'));
   }
   */
+});
+
+self.addEventListener('message', (e) => {
+  console.log('SW Recieved Message! ' + e.data);
+
+  // respond to just the client that sent the Message
+  self.clients.matchAll().then((clients) => {
+
+    clients.forEach((client) => {
+      if(e.source.id == client.id) {
+        client.postMessage("Got your message, thanks!");
+      }
+    })
+  })
+})
+
+self.addEventListener('push', () => {
+  console.log('Push Received!');
 });
