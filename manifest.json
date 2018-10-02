@@ -1,0 +1,22 @@
+{
+  "short_name": "Demo",
+  "name": "Progressive Web App Demo",
+  "icons": [
+    {
+      "src": "/SampleImages/.38-Special-Logo.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/SamleImages/.38-Special-Logo.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "blue",
+  "display": "standalone",
+  "scope": "/anotherpage.html",
+  "theme_color": "cyan"
+
+}
