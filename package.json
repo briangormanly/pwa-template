@@ -13,5 +13,8 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.10.0"
+  },
+  "dependencies": {
+    "web-push": "^3.3.3"
   }
 }
