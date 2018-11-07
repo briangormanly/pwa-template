@@ -1,7 +1,7 @@
 const webPush = require('web-push');
 
-process.env.VAPID_PUBLIC_KEY = 'BB3G6ZUqeaibX5msX060AJE72Eqi7z-2GGn2RVfpy62BVqj8EKdaAXhTU-6q-gB2kWdLzWtYkI9anzXmcubcmCA';
-process.env.VAPID_PRIVATE_KEY = 'vbY4Nw7sMD7pPdRzOayU9ahKPGmVfdl8Yo_fY_M0PWc';
+process.env.VAPID_PUBLIC_KEY = 'BJQpgo5yFXxyZwjwE7kCoS6XP2OlQc1RmdlbgOeMqG3DzcJ8r4WzWFW3yZcxPCe-Ca8JntuKYlVBhiE-3-e0FK8';
+process.env.VAPID_PRIVATE_KEY = 'JFAhWU6pvl7jh1TItLXYZQLUNLogtv83PBqTbeX4K9k';
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   console.log("You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY "+
